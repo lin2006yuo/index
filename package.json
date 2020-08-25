@@ -14,7 +14,9 @@
     "mobx-react": "^6.2.5",
     "next": "9.5.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-use": "^15.3.3",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.7",
