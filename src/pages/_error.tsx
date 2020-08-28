@@ -1,7 +1,8 @@
-import { NextPage, GetServerSideProps } from "next"
+import { NextPage, GetServerSideProps, NextPageContext } from "next"
 import classNames from "classnames"
 
 import styles from "../styles/common.module.css"
+import { ServerResponse } from "http"
 
 interface Props {
   errorCode: number
@@ -32,14 +33,10 @@ const _Error: NextPage<{
   )
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async ({
-  res,
-  req,
-}) => {
+_Error.getInitialProps = async ({ res }) => {
+  const code = res ? 500 : (res as unknown as ServerResponse).statusCode
   return {
-    props: {
-      errorCode: res.statusCode,
-    },
+    errorCode: code,
   }
 }
 
