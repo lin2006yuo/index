@@ -2,8 +2,6 @@ import {
   motion,
   useTransform,
   useMotionValue,
-  feGaussianBlur,
-  circle,
   useAnimation,
 } from "framer-motion"
 import React from "react"
