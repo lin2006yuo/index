@@ -18,8 +18,13 @@ export default function Home() {
 
         <div className={styles.grid}>
           <Link href="/a">
-            <h3 className={styles.card}>Documentation &rarr;</h3>
-            {/* <p>Find in-depth information about Next.js features and API.</p> */}
+            <h3 className={styles.card}>Documentation</h3>
+          </Link>
+          <Link href="/framer">
+            <h3 className={styles.card}>FRAMER</h3>
+          </Link>
+          <Link href="/framer_motion">
+            <h3 className={styles.card}>FRAMER_MOTION</h3>
           </Link>
         </div>
       </main>
