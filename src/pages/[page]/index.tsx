@@ -1,12 +1,16 @@
 import { NextPage } from "next"
 
+interface PageProps {
+  data: any
+}
+
 function p() {
-  return new Promise((resolve, reject) => {
+  return new Promise<PageProps>((resolve, reject) => {
     reject({ data: "error" })
   })
 }
 
-const Page: NextPage = ({ data }) => {
+const Page: NextPage<PageProps> = ({ data }) => {
   return <div>dynamic route {data}</div>
 }
 
